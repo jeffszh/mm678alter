@@ -13,8 +13,9 @@ local ProfUsed = vars.ProfUsed
 
 ---- Service functions
 local function SetProfUsed(NPC)
-	local Prof = NPC or GetCurrentNPC()
-	ProfUsed[Prof] = Game.DayOfMonth
+	--去掉每天一次的限制
+--	local Prof = NPC or GetCurrentNPC()
+--	ProfUsed[Prof] = Game.DayOfMonth
 end
 
 local function CanUseProf(NPC)
