@@ -540,9 +540,9 @@ WearItemConditions[508] = function(PlayerId)
 	return GetRace(Party[PlayerId]) == const.Race.Vampire
 end
 
--- Glomenmail （改：加上弓箭手也能穿）
+-- Glomenmail
 WearItemConditions[514] = function(PlayerId)
-	return GetRace(Party[PlayerId]) == const.Race.DarkElf or Party[PlayerId].Class >= 0 and Party[PlayerId].Class <= 3
+	return GetRace(Party[PlayerId]) == const.Race.DarkElf
 end
 
 -- Supreme plate
@@ -608,9 +608,6 @@ end
 
 --------------------------------
 ---- Stat bonuses
-
--- 大天使之翼，個性也增加30，原先只是增加智力。
-GetBonusList(522).Stats = {	[const.Stats.Personality] = 30}
 
 -- Crown of final Dominion
 GetBonusList(521).Stats = {	[const.Stats.Intellect] = 50}
@@ -802,11 +799,11 @@ GetBonusList(2035).Skills =	{	[const.Skills.DisarmTraps] = 10}
 ---- Spell bonuses
 
 -- Eclipse
-GetBonusList(516).SpellBonus  =	{[const.Skills.Spirit] = true, [const.Skills.Body] = true, [const.Skills.Mind] = true, [const.Skills.Light] = true}
+GetBonusList(516).SpellBonus  =	{[const.Skills.Spirit] = true, [const.Skills.Body] = true, [const.Skills.Mind] = true}
 -- Crown of final Dominion
 GetBonusList(521).SpellBonus	 =	{[const.Skills.Dark] = true}
 -- Staff of Elements
-GetBonusList(530).SpellBonus =	{[const.Skills.Fire] = true, [const.Skills.Air] = true, [const.Skills.Water] = true, [const.Skills.Earth] = true, [const.Skills.Light] = true}
+GetBonusList(530).SpellBonus =	{[const.Skills.Fire] = true, [const.Skills.Air] = true, [const.Skills.Water] = true, [const.Skills.Earth] = true}
 -- Staff of Elements
 GetBonusList(535).SpellBonus =	{[const.Skills.Water] = true}
 -- Ruler's ring
@@ -861,49 +858,8 @@ GetBonusList(2043).Buffs = {[const.PlayerBuff.Shield] = 3}
 --------------------------------
 ---- Effect Immunities
 
--- Galahad 添加對所有負面效果免疫
-GetBonusList(2026).EffectImmunities = {	[const.MonsterBonus.Insane] 	= true,
-							[const.MonsterBonus.Curse] 	= true,
-							[const.MonsterBonus.Disease1] 	= true,
-							[const.MonsterBonus.Disease2] 	= true,
-							[const.MonsterBonus.Disease3] 	= true,
-							[const.MonsterBonus.Paralyze] 	= true,
-							[const.MonsterBonus.Stone] 		= true,
-							[const.MonsterBonus.Poison1] 	= true,
-							[const.MonsterBonus.Poison2] 	= true,
-							[const.MonsterBonus.Poison3] 	= true,
-							[const.MonsterBonus.Asleep] 	= true,
-							[const.MonsterBonus.Dead] 	    = true,
-							[const.MonsterBonus.Errad] 	    = true,
-							[const.MonsterBonus.Weak] 	    = true,
-							[const.MonsterBonus.Drunk] 	    = true,
-							[const.MonsterBonus.Uncon] 	    = true,
-							[const.MonsterBonus.Age] 	    = true,
-							[const.MonsterBonus.Afraid] 	= true}
-
--- 大天使之翼，同樣添加所有免疫。
-GetBonusList(522).EffectImmunities = {	[const.MonsterBonus.Insane] 	= true,
-							[const.MonsterBonus.Curse] 	= true,
-							[const.MonsterBonus.Disease1] 	= true,
-							[const.MonsterBonus.Disease2] 	= true,
-							[const.MonsterBonus.Disease3] 	= true,
-							[const.MonsterBonus.Paralyze] 	= true,
-							[const.MonsterBonus.Stone] 		= true,
-							[const.MonsterBonus.Poison1] 	= true,
-							[const.MonsterBonus.Poison2] 	= true,
-							[const.MonsterBonus.Poison3] 	= true,
-							[const.MonsterBonus.Asleep] 	= true,
-							[const.MonsterBonus.Dead] 	    = true,
-							[const.MonsterBonus.Errad] 	    = true,
-							[const.MonsterBonus.Weak] 	    = true,
-							[const.MonsterBonus.Drunk] 	    = true,
-							[const.MonsterBonus.Uncon] 	    = true,
-							[const.MonsterBonus.Age] 	    = true,
-							[const.MonsterBonus.Afraid] 	= true}
-
 -- Yoruba
 GetBonusList(1307).EffectImmunities = {	[const.MonsterBonus.Insane] 	= true,
-							[const.MonsterBonus.Curse] 	= true,
 							[const.MonsterBonus.Disease1] 	= true,
 							[const.MonsterBonus.Disease2] 	= true,
 							[const.MonsterBonus.Disease3] 	= true,
@@ -912,21 +868,13 @@ GetBonusList(1307).EffectImmunities = {	[const.MonsterBonus.Insane] 	= true,
 							[const.MonsterBonus.Poison1] 	= true,
 							[const.MonsterBonus.Poison2] 	= true,
 							[const.MonsterBonus.Poison3] 	= true,
-							[const.MonsterBonus.Asleep] 	= true,
-							[const.MonsterBonus.Dead] 	    = true,
-							[const.MonsterBonus.Errad] 	    = true,
-							[const.MonsterBonus.Weak] 	    = true,
-							[const.MonsterBonus.Drunk] 	    = true,
-							[const.MonsterBonus.Uncon] 	    = true,
-							[const.MonsterBonus.Age] 	    = true,
-							[const.MonsterBonus.Afraid] 	= true}
+							[const.MonsterBonus.Asleep] 	= true}
 -- Ghoulsbane
 GetBonusList(1309).EffectImmunities = {[const.MonsterBonus.Paralyze] = true}
 -- Kelebrim
 GetBonusList(1322).EffectImmunities = {[const.MonsterBonus.Stone] = true}
 -- Cloak of the sheep
 GetBonusList(1332).EffectImmunities = {	[const.MonsterBonus.Insane] 	= true,
-							[const.MonsterBonus.Curse] 	= true,
 							[const.MonsterBonus.Disease1] 	= true,
 							[const.MonsterBonus.Disease2] 	= true,
 							[const.MonsterBonus.Disease3] 	= true,
@@ -935,14 +883,7 @@ GetBonusList(1332).EffectImmunities = {	[const.MonsterBonus.Insane] 	= true,
 							[const.MonsterBonus.Poison1] 	= true,
 							[const.MonsterBonus.Poison2] 	= true,
 							[const.MonsterBonus.Poison3] 	= true,
-							[const.MonsterBonus.Asleep] 	= true,
-							[const.MonsterBonus.Dead] 	    = true,
-							[const.MonsterBonus.Errad] 	    = true,
-							[const.MonsterBonus.Weak] 	    = true,
-							[const.MonsterBonus.Drunk] 	    = true,
-							[const.MonsterBonus.Uncon] 	    = true,
-							[const.MonsterBonus.Age] 	    = true,
-							[const.MonsterBonus.Afraid] 	= true}
+							[const.MonsterBonus.Asleep] 	= true}
 -- Medusa's mirror
 GetBonusList(1341).EffectImmunities = {[const.MonsterBonus.Stone] = true}
 -- Aegis
