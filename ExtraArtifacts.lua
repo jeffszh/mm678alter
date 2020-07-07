@@ -1134,3 +1134,15 @@ OnHitEffects[2040] = {
 		CastSpellDirect(125,Skill,Mas)
 		evt.CastSpell(18, Mas, Skill, t.Monster.X,t.Monster.Y,t.Monster.Z+50, t.Monster.X,t.Monster.Y,t.Monster.Z)
 	end}
+
+-- 特敏那斯聖劍，增加爆裂斧同樣效果。
+GetBonusList(502).Stats = {[const.Stats.FireResistance] = 65000,[const.Stats.WaterResistance] = 65000}
+OnHitEffects[502] = {
+	DamageKind 	= const.Damage.Fire,
+	Add			= 10,
+	Special = function(t)
+		local Skill, Mas = SpellPowerByItemSkill(t.Player, t.Item)
+		CastSpellDirect(125,Skill,Mas)
+		evt.CastSpell(6, Mas, Skill, t.Monster.X,t.Monster.Y,t.Monster.Z+50, t.Monster.X,t.Monster.Y,t.Monster.Z)
+	end
+}
