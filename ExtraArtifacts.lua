@@ -1136,7 +1136,7 @@ OnHitEffects[2040] = {
 	end}
 
 -- 特敏那斯聖劍，增加爆裂斧同樣效果。
-GetBonusList(502).Stats = {[const.Stats.FireResistance] = 65000,[const.Stats.WaterResistance] = 65000}
+GetBonusList(502).Stats = {[const.Stats.FireResistance] = 65000}
 OnHitEffects[502] = {
 	DamageKind 	= const.Damage.Fire,
 	Add			= 10,
