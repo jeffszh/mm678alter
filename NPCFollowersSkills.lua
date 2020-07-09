@@ -20,7 +20,9 @@ end
 local function CanUseProf(NPC)
 	local Prof = NPC or GetCurrentNPC()
 	local State = ProfUsed[Prof]
-	return State == nil or State ~= Game.DayOfMonth
+	--去掉每天一次的限制
+--	return State == nil or State ~= Game.DayOfMonth
+	return true
 end
 
 local function CastFollowersSpell(Spell, Skill, Mastery)
