@@ -411,7 +411,7 @@ end
 
 -- Cast fly
 evt.Global[1716] = function()
-	CastFollowersSpell(21, 2, 10)
+	CastFollowersSpell(21, 4, 4)
 end
 
 -- Make food
