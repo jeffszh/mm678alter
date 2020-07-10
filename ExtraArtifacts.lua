@@ -1050,6 +1050,8 @@ OnHitEffects[1310] = {
 
 			t.Result = t.Result*2
 		end
+		-- 加上吸血
+		t.Vampiric = true
 	end}
 -- Ullyses
 OnHitEffects[1312] = {
