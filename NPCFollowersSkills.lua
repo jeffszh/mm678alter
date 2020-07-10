@@ -304,7 +304,12 @@ StatsBonuses = {
 -- ProfID = {Buff = PartyBuff, Skill = , Power = }
 FollowersBuffs = {
 
-[38] = {Buff = const.PartyBuff.WizardEye, Skill = 4, Power = 2}
+[38] = {Buff = const.PartyBuff.WizardEye, Skill = 4, Power = 2},
+
+-- 追風大師加上巫師之眼
+[39] = {Buff = const.PartyBuff.WizardEye, Skill = 4, Power = 4},
+-- 護門大師加上火炬
+[41] = {Buff = const.PartyBuff.TorchLight, Skill = 4, Power = 4}
 
 }
 
